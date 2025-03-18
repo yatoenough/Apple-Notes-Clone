@@ -22,5 +22,8 @@ struct FolderListView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    FolderListView()
+    NavigationStack {
+        FolderListView()
+    }
+    
 }

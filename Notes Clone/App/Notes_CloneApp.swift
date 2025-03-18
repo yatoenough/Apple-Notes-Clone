@@ -13,7 +13,7 @@ struct Notes_CloneApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                FoldersView()
+                FoldersScreenView()
             }
         }
     }

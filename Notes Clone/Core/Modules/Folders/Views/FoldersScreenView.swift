@@ -1,5 +1,5 @@
 //
-//  FoldersView.swift
+//  FoldersScreenView.swift
 //  Notes Clone
 //
 //  Created by Nikita Shyshkin on 18/03/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FoldersView: View {
+struct FoldersScreenView: View {
     @State private var searchText: String = ""
     
     var body: some View {
@@ -42,6 +42,6 @@ struct FoldersView: View {
 
 #Preview {
     NavigationStack {
-        FoldersView()
+        FoldersScreenView()
     }
 }

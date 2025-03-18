@@ -11,14 +11,22 @@ struct FolderListItem: View {
     let title: String
     
     var body: some View {
-        HStack {
-            Image(systemName: "folder")
-                .foregroundStyle(.accent)
-            Text(title)
+        NavigationLink {
+            FolderView()
+        } label: {
+            HStack {
+                Image(systemName: "folder")
+                    .foregroundStyle(.accent)
+                Text(title)
+            }
         }
     }
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    FolderListItem(title: "Folder")
+    NavigationStack {
+        List {
+            FolderListItem(title: "Folder")
+        }
+    }
 }
