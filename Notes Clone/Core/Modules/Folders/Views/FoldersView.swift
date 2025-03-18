@@ -11,11 +11,32 @@ struct FoldersView: View {
     @State private var searchText: String = ""
     
     var body: some View {
-        ScrollView {
-        
-        }
-        .searchable(text: $searchText)
-        .navigationTitle("Folders")
+        FolderListView()
+            .searchable(text: $searchText)
+            .navigationTitle("Folders")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    EditButton()
+                }
+                
+                ToolbarItem(placement: .bottomBar) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "folder.badge.plus")
+                    }
+                    
+                }
+                
+                ToolbarItem(placement: .bottomBar) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "square.and.pencil")
+                    }
+                    
+                }
+            }
     }
 }
 
