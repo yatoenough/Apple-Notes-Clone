@@ -11,7 +11,7 @@ struct FoldersScreenView: View {
     @State private var searchText: String = ""
     
     var body: some View {
-        FolderListView()
+        FolderListView(headerTitle: "Local")
             .searchable(text: $searchText)
             .navigationTitle("Folders")
             .toolbar {

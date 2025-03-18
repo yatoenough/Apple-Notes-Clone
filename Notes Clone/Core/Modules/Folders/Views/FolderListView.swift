@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct FolderListView: View {
+    let headerTitle: String
+    
     var body: some View {
         List {
-            Section(header: Text("iCloud")) {
+            Section(header: Text(headerTitle)) {
                 FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
                 FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
                 FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
@@ -23,7 +25,7 @@ struct FolderListView: View {
 
 #Preview(traits: .sizeThatFitsLayout) {
     NavigationStack {
-        FolderListView()
+        FolderListView(headerTitle: "Local")
     }
     
 }

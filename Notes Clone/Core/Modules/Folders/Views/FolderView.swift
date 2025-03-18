@@ -9,12 +9,38 @@ import SwiftUI
 
 struct FolderView: View {
     let folder: Folder
+    @State private var searchText: String = ""
     
     var body: some View {
-        Text(folder.name)
+        List {
+            
+        }
+        .searchable(text: $searchText)
+        .navigationTitle(folder.name)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                EditButton()
+            }
+            
+            ToolbarItemGroup(placement: .bottomBar) {
+                Spacer()
+                Button {
+                    
+                } label: {
+                    Image(systemName: "square.and.pencil")
+                }
+                
+                
+            }
+            
+            
+        }
     }
 }
 
 #Preview {
-    FolderView(folder: Folder(id: UUID(), name: "Test Folder"))
+    NavigationStack {
+        FolderView(folder: Folder(id: UUID(), name: "Test Folder"))
+    }
+    
 }
