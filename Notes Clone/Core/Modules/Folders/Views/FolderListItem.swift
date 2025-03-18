@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct FolderListItem: View {
-    let title: String
+    let folder: Folder
     
     var body: some View {
         NavigationLink {
-            FolderView()
+            FolderView(folder: folder)
         } label: {
             HStack {
                 Image(systemName: "folder")
                     .foregroundStyle(.accent)
-                Text(title)
+                Text(folder.name)
             }
         }
     }
@@ -26,7 +26,7 @@ struct FolderListItem: View {
 #Preview(traits: .sizeThatFitsLayout) {
     NavigationStack {
         List {
-            FolderListItem(title: "Folder")
+            FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
         }
     }
 }

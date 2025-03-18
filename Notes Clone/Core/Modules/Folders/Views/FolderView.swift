@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct FolderView: View {
+    let folder: Folder
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(folder.name)
     }
 }
 
 #Preview {
-    FolderView()
+    FolderView(folder: Folder(id: UUID(), name: "Test Folder"))
 }

@@ -11,9 +11,9 @@ struct FolderListView: View {
     var body: some View {
         List {
             Section(header: Text("iCloud")) {
-                FolderListItem(title: "Folder")
-                FolderListItem(title: "Folder")
-                FolderListItem(title: "Folder")
+                FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
+                FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
+                FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
             }
             .headerProminence(.increased)
         }
