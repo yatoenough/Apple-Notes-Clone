@@ -29,20 +29,42 @@
 		741651F82D8A3079004DC3FC /* Notes CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Notes CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7416520E2D8A3178004DC3FC /* Exceptions for "Notes Clone" folder in "Notes Clone" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/UI/Notes_CloneUITests.swift,
+				Tests/UI/Notes_CloneUITestsLaunchTests.swift,
+				Tests/Unit/Notes_CloneTests.swift,
+			);
+			target = 741651DB2D8A3078004DC3FC /* Notes Clone */;
+		};
+		7416520F2D8A3178004DC3FC /* Exceptions for "Notes Clone" folder in "Notes CloneTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/Unit/Notes_CloneTests.swift,
+			);
+			target = 741651ED2D8A3079004DC3FC /* Notes CloneTests */;
+		};
+		741652102D8A317B004DC3FC /* Exceptions for "Notes Clone" folder in "Notes CloneUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/UI/Notes_CloneUITests.swift,
+				Tests/UI/Notes_CloneUITestsLaunchTests.swift,
+			);
+			target = 741651F72D8A3079004DC3FC /* Notes CloneUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		741651DE2D8A3078004DC3FC /* Notes Clone */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7416520E2D8A3178004DC3FC /* Exceptions for "Notes Clone" folder in "Notes Clone" target */,
+				7416520F2D8A3178004DC3FC /* Exceptions for "Notes Clone" folder in "Notes CloneTests" target */,
+				741652102D8A317B004DC3FC /* Exceptions for "Notes Clone" folder in "Notes CloneUITests" target */,
+			);
 			path = "Notes Clone";
-			sourceTree = "<group>";
-		};
-		741651F12D8A3079004DC3FC /* Notes CloneTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Notes CloneTests";
-			sourceTree = "<group>";
-		};
-		741651FB2D8A3079004DC3FC /* Notes CloneUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Notes CloneUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,8 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				741651DE2D8A3078004DC3FC /* Notes Clone */,
-				741651F12D8A3079004DC3FC /* Notes CloneTests */,
-				741651FB2D8A3079004DC3FC /* Notes CloneUITests */,
 				741651DD2D8A3078004DC3FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +150,6 @@
 			dependencies = (
 				741651F02D8A3079004DC3FC /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				741651F12D8A3079004DC3FC /* Notes CloneTests */,
-			);
 			name = "Notes CloneTests";
 			packageProductDependencies = (
 			);
@@ -152,9 +169,6 @@
 			);
 			dependencies = (
 				741651FA2D8A3079004DC3FC /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				741651FB2D8A3079004DC3FC /* Notes CloneUITests */,
 			);
 			name = "Notes CloneUITests";
 			packageProductDependencies = (
