@@ -41,7 +41,9 @@ struct FoldersScreenView: View {
 }
 
 #Preview {
-    NavigationStack {
-        FoldersScreenView()
+    ModelContainerPreview {
+        NavigationStack {
+            FoldersScreenView()
+        }
     }
 }

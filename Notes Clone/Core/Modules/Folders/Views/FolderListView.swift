@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct FolderListView: View {
     let headerTitle: String
     
+    @Query private var folders: [Folder]
+    
     var body: some View {
         List {
             Section(header: Text(headerTitle)) {
-                FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
-                FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
-                FolderListItem(folder: Folder(id: UUID(), name: "Test Folder"))
+                ForEach(folders, id: \.id) { folder in
+                    FolderListItem(folder: folder)
+                }
             }
             .headerProminence(.increased)
         }
@@ -24,8 +27,9 @@ struct FolderListView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    NavigationStack {
-        FolderListView(headerTitle: "Local")
+    ModelContainerPreview {
+        NavigationStack {
+            FolderListView(headerTitle: "Local")
+        }
     }
-    
 }

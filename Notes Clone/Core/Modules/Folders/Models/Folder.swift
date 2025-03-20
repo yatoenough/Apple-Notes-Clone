@@ -17,4 +17,10 @@ class Folder {
         self.id = id
         self.name = name
     }
+    
+    static let defaultFolders: [Folder] = [
+        .init(id: UUID(), name: "Daily"),
+        .init(id: UUID(), name: "Study"),
+        .init(id: UUID(), name: "Work"),
+    ]
 }
