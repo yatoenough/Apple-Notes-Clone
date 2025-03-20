@@ -10,11 +10,23 @@ import SwiftData
 
 @main
 struct Notes_CloneApp: App {
+    private let modelContainer: ModelContainer = {
+        let config = ModelConfiguration(isStoredInMemoryOnly: false)
+        
+        do {
+            return try ModelContainer(for: Schema([Folder.self]), configurations: config)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+        
+    }()
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 FoldersScreenView()
             }
+            .modelContainer(modelContainer)
         }
     }
 }

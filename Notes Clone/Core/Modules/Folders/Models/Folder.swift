@@ -6,8 +6,15 @@
 //
 
 import Foundation
+import SwiftData
 
-struct Folder {
+@Model
+class Folder {
     var id: UUID
     var name: String
+    
+    init(id: UUID, name: String) {
+        self.id = id
+        self.name = name
+    }
 }
